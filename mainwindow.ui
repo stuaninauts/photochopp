@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>720</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PhotoChopp</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <widget class="QLabel" name="img_label_modified">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>720</width>
+      <height>720</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>720</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuImage_Transformation">
+    <property name="title">
+     <string>Image Transformation</string>
+    </property>
+    <addaction name="actionMirror_Vertically"/>
+    <addaction name="actionMirror_Horizontally"/>
+    <addaction name="actionRotate_90_Clockwise"/>
+    <addaction name="actionRotate_90_Counterclockwise"/>
+    <addaction name="actionZoom_in"/>
+    <addaction name="actionZoom_out"/>
+   </widget>
+   <widget class="QMenu" name="menuImage_Adjustment">
+    <property name="title">
+     <string>Image Adjustment</string>
+    </property>
+    <addaction name="actionShow_Histogram"/>
+    <addaction name="actionGrayscale"/>
+    <addaction name="actionNegative"/>
+    <addaction name="actionAdjust_Brightness"/>
+    <addaction name="actionAdjust_Contrast"/>
+    <addaction name="actionQuantize"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionImport_Image"/>
+    <addaction name="actionSave_Image_As"/>
+    <addaction name="actionReset_Original_Image_Size"/>
+    <addaction name="actionCopy_Image_to_Clipboard"/>
+    <addaction name="actionReset_Image_to_Original"/>
+   </widget>
+   <widget class="QMenu" name="menuFilters_and_Convolution">
+    <property name="title">
+     <string>Filters and Convolution</string>
+    </property>
+    <addaction name="actionGaussian_lowpass"/>
+    <addaction name="actionLaplacian_High_Pass"/>
+    <addaction name="actionGeneric_High_Pass"/>
+    <addaction name="actionPrewitt_Hx"/>
+    <addaction name="actionPrewitt_Hy"/>
+    <addaction name="actionSobel_Hx"/>
+    <addaction name="actionSobel_Hy"/>
+    <addaction name="actionCustom_3x3_Kernel"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuImage_Transformation"/>
+   <addaction name="menuImage_Adjustment"/>
+   <addaction name="menuFilters_and_Convolution"/>
+  </widget>
+  <action name="actionMirror_Vertically">
+   <property name="text">
+    <string>⇅ Mirror Vertically </string>
+   </property>
+  </action>
+  <action name="actionMirror_Horizontally">
+   <property name="text">
+    <string>⇄ Mirror Horizontally</string>
+   </property>
+  </action>
+  <action name="actionGrayscale">
+   <property name="text">
+    <string>Grayscale</string>
+   </property>
+  </action>
+  <action name="actionNegative">
+   <property name="text">
+    <string>Negative</string>
+   </property>
+  </action>
+  <action name="actionImport_Image">
+   <property name="text">
+    <string>Import Image</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionSave_Image_As">
+   <property name="text">
+    <string>Save Image As ...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionRotate_90_Clockwise">
+   <property name="text">
+    <string>↻ Rotate 90° Clockwise </string>
+   </property>
+  </action>
+  <action name="actionRotate_90_Counterclockwise">
+   <property name="text">
+    <string>↺ Rotate 90° Counterclockwise </string>
+   </property>
+  </action>
+  <action name="actionGaussian_lowpass">
+   <property name="text">
+    <string>Gaussian (Low-Pass)</string>
+   </property>
+  </action>
+  <action name="actionLaplacian_High_Pass">
+   <property name="text">
+    <string>Laplacian (High-Pass)</string>
+   </property>
+  </action>
+  <action name="actionGeneric_High_Pass">
+   <property name="text">
+    <string>Generic High-Pass</string>
+   </property>
+  </action>
+  <action name="actionPrewitt_Hx">
+   <property name="text">
+    <string>Prewitt Hx</string>
+   </property>
+  </action>
+  <action name="actionPrewitt_Hy">
+   <property name="text">
+    <string>Prewitt Hy</string>
+   </property>
+  </action>
+  <action name="actionSobel_Hx">
+   <property name="text">
+    <string>Sobel Hx</string>
+   </property>
+  </action>
+  <action name="actionSobel_Hy">
+   <property name="text">
+    <string>Sobel Hy</string>
+   </property>
+  </action>
+  <action name="actionZoom_in">
+   <property name="text">
+    <string>⨁ Zoom in</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+=</string>
+   </property>
+  </action>
+  <action name="actionZoom_out">
+   <property name="text">
+    <string>⨂ Zoom out</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
+   </property>
+  </action>
+  <action name="actionAdjust_Brightness">
+   <property name="text">
+    <string>Adjust Brightness</string>
+   </property>
+  </action>
+  <action name="actionAdjust_Contrast">
+   <property name="text">
+    <string>Adjust Contrast</string>
+   </property>
+  </action>
+  <action name="actionQuantize">
+   <property name="text">
+    <string>Quantize</string>
+   </property>
+  </action>
+  <action name="actionCustom_3x3_Kernel">
+   <property name="text">
+    <string>Custom 3x3 Kernel</string>
+   </property>
+  </action>
+  <action name="actionReset_Image_to_Original">
+   <property name="text">
+    <string>Reset Modified Image to Original</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionCopy_Image_to_Clipboard">
+   <property name="text">
+    <string>Copy Modified Image to Clipboard</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionShow_Histogram">
+   <property name="text">
+    <string>Show Histogram</string>
+   </property>
+  </action>
+  <action name="actionHistogram_Matching">
+   <property name="text">
+    <string>Histogram Matching</string>
+   </property>
+  </action>
+  <action name="actionHistogram_Equalization">
+   <property name="text">
+    <string>Histogram Equalization</string>
+   </property>
+  </action>
+  <action name="actionReset_Original_Image_Size">
+   <property name="text">
+    <string>Reset Original Image Window Size</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
